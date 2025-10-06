@@ -1,0 +1,64 @@
+55, 55, CPU burst
+55, 1, switch to kernel mode
+56, 10, context saved
+66, 1, find vector 25 in memory position 0x0032
+67, 1, load address 0X05D3
+ into the PC
+68, 40, SYSCALL: run the ISR (device driver)
+108, 40, transfer data from device to memory
+148, 21993, check for errors
+22141, 1, IRET for device 25
+22142, 1, switch back to user mode
+22198, 55, CPU burst
+22198, 1, switch to kernel mode
+22199, 10, context saved
+22209, 1, find vector 25 in memory position 0x0032
+22210, 1, load address 0X05D3
+ into the PC
+22211, 40, ENDIO: run the ISR (device driver)
+22251, 22073, check device status
+44324, 1, IRET for device 25
+44325, 1, switch back to user mode
+44381, 55, CPU burst
+44381, 1, switch to kernel mode
+44382, 10, context saved
+44392, 1, find vector 1 in memory position 0x0002
+44393, 1, load address 0X029C
+ into the PC
+44394, 40, SYSCALL: run the ISR (device driver)
+44434, 40, transfer data from device to memory
+44474, 20, check for errors
+44494, 1, IRET for device 1
+44495, 1, switch back to user mode
+44551, 55, CPU burst
+44551, 1, switch to kernel mode
+44552, 10, context saved
+44562, 1, find vector 1 in memory position 0x0002
+44563, 1, load address 0X029C
+ into the PC
+44564, 40, ENDIO: run the ISR (device driver)
+44604, 100, check device status
+44704, 1, IRET for device 1
+44705, 1, switch back to user mode
+44761, 55, CPU burst
+44761, 1, switch to kernel mode
+44762, 10, context saved
+44772, 1, find vector 25 in memory position 0x0032
+44773, 1, load address 0X05D3
+ into the PC
+44774, 40, SYSCALL: run the ISR (device driver)
+44814, 40, transfer data from device to memory
+44854, 21993, check for errors
+66847, 1, IRET for device 25
+66848, 1, switch back to user mode
+66904, 55, CPU burst
+66904, 1, switch to kernel mode
+66905, 10, context saved
+66915, 1, find vector 25 in memory position 0x0032
+66916, 1, load address 0X05D3
+ into the PC
+66917, 40, ENDIO: run the ISR (device driver)
+66957, 22073, check device status
+89030, 1, IRET for device 25
+89031, 1, switch back to user mode
+89087, 55, CPU burst
