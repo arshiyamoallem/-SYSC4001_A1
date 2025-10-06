@@ -1,8 +1,8 @@
 /**
  *
  * @file interrupts.cpp
- * @author Sasisekhar Govind
- *
+ * @author Arshiya Moallem (101324189) & Aveen Majeed (101306558)
+ * @version SYSC4001 Assignment 1 
  */
 
 #include<interrupts.hpp>
@@ -48,8 +48,8 @@ int main(int argc, char** argv) {
         else if (activity == "SYSCALL") {
             device_number = duration_intr;
             
-            auto [boilerplate_exec, updated_time] = intr_boilerplate(curr_sim_time, device_number, SAVE_CONTEXT_TIME, vectors);
-            execution += boilerplate_exec;
+            auto [boilerplate_execute, updated_time] = intr_boilerplate(curr_sim_time, device_number, SAVE_CONTEXT_TIME, vectors);
+            execution += boilerplate_execute;
             curr_sim_time = updated_time;
 
             int device_io_delay_time = delays[device_number];
@@ -77,8 +77,8 @@ int main(int argc, char** argv) {
         else if (activity == "END_IO") {
             device_number = duration_intr;
             
-            auto [boilerplate_exec, updated_time] = intr_boilerplate(curr_sim_time, device_number, SAVE_CONTEXT_TIME, vectors);
-            execution += boilerplate_exec;
+            auto [boilerplate_execute, updated_time] = intr_boilerplate(curr_sim_time, device_number, SAVE_CONTEXT_TIME, vectors);
+            execution += boilerplate_execute;
             curr_sim_time = updated_time;
 
             execution += std::to_string(curr_sim_time) + ", " + std::to_string(EXECUTE_ISR_TIME) +
